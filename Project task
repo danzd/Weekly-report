@@ -1,0 +1,21 @@
+In the provided sqlite database is a table which represents the outbound calls made
+by the system . Each record represents a call attempt made to a client with a call result indicating
+the outcome of the call.
+To help more easily monitor the ongoing collections performance you have been tasked to
+create a weekly report. The report should
+provide the stakeholders the possibility to monitor KPIs on an ongoing basis on an overall team
+level as well individual agent performance level. The KPIs are monitored by stakeholders on a
+monthly basis.
+KPIs for the overall team:
+● Connection Rate: Ratio of customers who answered call divided by all customers who
+were called 
+● Average Calls per Customer: Average number of calls per unique customer
+● Number of RPC (Right Party Contact) Collection Calls: Number of Calls which we
+consider as having reached the right party. (Calls with result "Agreement", "Already Paid", "Call another time", "Payment on the way","Refused to pay", "Return")
+KPIs for Agent level:
+● Promise Rate: Ratio of cases to collect with Collection call agreement divided by all
+cases to collect
+● Average Call duration per connect call with “Agreement”: Average call duration in
+seconds where there was agreement
+If there was more then one call attempt per day for the unique customer, count only one attempt
+(the last one according to time of proceeding and its result)
